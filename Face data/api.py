@@ -177,7 +177,7 @@ def face_landmarks(face_image, face_locations=None, model="large"):
     landmarks = _raw_face_landmarks(face_image, face_locations, model)
     landmarks_as_tuples = [[(p.x, p.y) for p in landmark.parts()] for landmark in landmarks]
 
-    # For a definition of each point index, see https://cdn-images-1.medium.com/max/1600/1*AbEg31EgkbXSQehuNJBlWg.png
+    
     if model == 'large':
         return [{
             "chin": points[0:17],
